@@ -12,6 +12,10 @@
 		F588606521320D640017F389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606321320D640017F389 /* Main.storyboard */; };
 		F588606721320D690017F389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F588606621320D690017F389 /* Assets.xcassets */; };
 		F588606A21320D690017F389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606821320D690017F389 /* LaunchScreen.storyboard */; };
+		F5886078213210C50017F389 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5886077213210C50017F389 /* State.swift */; };
+		F588607A213210D50017F389 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5886079213210D50017F389 /* States.swift */; };
+		F588607C213210E40017F389 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607B213210E40017F389 /* StateController.swift */; };
+		F588607E2132114B0017F389 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607D2132114B0017F389 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F588606621320D690017F389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F588606921320D690017F389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F588606B21320D690017F389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5886077213210C50017F389 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		F5886079213210D50017F389 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		F588607B213210E40017F389 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		F588607D2132114B0017F389 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,66 @@
 		F588605E21320D630017F389 /* BBVABrianWeissberg */ = {
 			isa = PBXGroup;
 			children = (
-				F588605F21320D630017F389 /* AppDelegate.swift */,
-				F588606121320D630017F389 /* ViewController.swift */,
-				F588606321320D640017F389 /* Main.storyboard */,
-				F588606621320D690017F389 /* Assets.xcassets */,
-				F588606821320D690017F389 /* LaunchScreen.storyboard */,
-				F588606B21320D690017F389 /* Info.plist */,
+				F5886071213210450017F389 /* Models */,
+				F58860722132104C0017F389 /* Model Controller */,
+				F5886073213210530017F389 /* View Controllers */,
+				F5886076213210650017F389 /* Storyboards */,
+				F58860752132105F0017F389 /* Helpers */,
+				F58860742132105A0017F389 /* Resources */,
 			);
 			path = BBVABrianWeissberg;
+			sourceTree = "<group>";
+		};
+		F5886071213210450017F389 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5886077213210C50017F389 /* State.swift */,
+				F5886079213210D50017F389 /* States.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F58860722132104C0017F389 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F588607B213210E40017F389 /* StateController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		F5886073213210530017F389 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F588606121320D630017F389 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F58860742132105A0017F389 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F588606B21320D690017F389 /* Info.plist */,
+				F588606621320D690017F389 /* Assets.xcassets */,
+				F588605F21320D630017F389 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F58860752132105F0017F389 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F588607D2132114B0017F389 /* Keys.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F5886076213210650017F389 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F588606321320D640017F389 /* Main.storyboard */,
+				F588606821320D690017F389 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F588606221320D630017F389 /* ViewController.swift in Sources */,
+				F588607E2132114B0017F389 /* Keys.swift in Sources */,
 				F588606021320D630017F389 /* AppDelegate.swift in Sources */,
+				F5886078213210C50017F389 /* State.swift in Sources */,
+				F588607A213210D50017F389 /* States.swift in Sources */,
+				F588607C213210E40017F389 /* StateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ8LK92JZ2;
-				INFOPLIST_FILE = BBVABrianWeissberg/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BBVABrianWeissberg/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ8LK92JZ2;
-				INFOPLIST_FILE = BBVABrianWeissberg/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BBVABrianWeissberg/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
