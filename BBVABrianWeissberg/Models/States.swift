@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+struct States: Decodable {
+    
+    var states = [State]()
+    
+    enum CodingKeys: String, CodingKey {
+        case restResponse = "RestResponse"
+    }
+    
+    enum RestResponseKeys: String, CodingKey {
+        case result
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        let results = try values.nestedContainer(keyedBy: RestResponseKeys.self, forKey: .restResponse)
+        let states = try results.decode([State].self, forKey: .result)
+        
+        self.states = states
+    }
+}
+
