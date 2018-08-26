@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BWCustomCell
 
 class StatesViewController: UIViewController {
     
@@ -28,6 +29,7 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 60
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setUpTableView()
@@ -51,10 +53,11 @@ extension StatesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as? StateTableViewCell ?? StateTableViewCell()
         let state = states[indexPath.row]
-        cell.textLabel?.text = state.name
-        cell.detailTextLabel?.text = state.capital
+        let cellWidth = self.view.frame.width
+        cell.width = cellWidth
+        cell.state = state
         return cell
     }
 }
