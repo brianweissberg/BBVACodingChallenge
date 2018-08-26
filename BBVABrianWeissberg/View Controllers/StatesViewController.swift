@@ -34,9 +34,10 @@ class StatesViewController: UIViewController {
     }
     
     func setUpTableView() {
-        StateController.shared.fetchSchools { (states) in
+        
+        NetworkController.shared.fetchStates { (states) in
             DispatchQueue.main.async {
-                self.states = StateController.shared.states
+                self.states = states
                 self.tableView.reloadData()
             }
         }

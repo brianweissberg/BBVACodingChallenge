@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5028C9E21322AF10051C75A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028C9D21322AF10051C75A /* Extensions.swift */; };
+		F5028CA021322C500051C75A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028C9F21322C500051C75A /* NetworkController.swift */; };
 		F588606021320D630017F389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588605F21320D630017F389 /* AppDelegate.swift */; };
 		F588606221320D630017F389 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588606121320D630017F389 /* StatesViewController.swift */; };
 		F588606521320D640017F389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606321320D640017F389 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5028C9D21322AF10051C75A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F5028C9F21322C500051C75A /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		F588605C21320D630017F389 /* BBVABrianWeissberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBVABrianWeissberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F588605F21320D630017F389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F588606121320D630017F389 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			children = (
 				F588607D2132114B0017F389 /* Keys.swift */,
 				F588607F213220300017F389 /* DistanceConversion.swift */,
+				F5028C9D21322AF10051C75A /* Extensions.swift */,
+				F5028C9F21322C500051C75A /* NetworkController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 				F588606221320D630017F389 /* StatesViewController.swift in Sources */,
 				F588607E2132114B0017F389 /* Keys.swift in Sources */,
 				F588606021320D630017F389 /* AppDelegate.swift in Sources */,
+				F5028C9E21322AF10051C75A /* Extensions.swift in Sources */,
 				F5886078213210C50017F389 /* State.swift in Sources */,
 				F588607A213210D50017F389 /* States.swift in Sources */,
 				F5886080213220300017F389 /* DistanceConversion.swift in Sources */,
 				F588607C213210E40017F389 /* StateController.swift in Sources */,
+				F5028CA021322C500051C75A /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
