@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F588606021320D630017F389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588605F21320D630017F389 /* AppDelegate.swift */; };
-		F588606221320D630017F389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588606121320D630017F389 /* ViewController.swift */; };
+		F588606221320D630017F389 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588606121320D630017F389 /* StatesViewController.swift */; };
 		F588606521320D640017F389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606321320D640017F389 /* Main.storyboard */; };
 		F588606721320D690017F389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F588606621320D690017F389 /* Assets.xcassets */; };
 		F588606A21320D690017F389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606821320D690017F389 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,13 @@
 		F588607A213210D50017F389 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5886079213210D50017F389 /* States.swift */; };
 		F588607C213210E40017F389 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607B213210E40017F389 /* StateController.swift */; };
 		F588607E2132114B0017F389 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607D2132114B0017F389 /* Keys.swift */; };
+		F5886080213220300017F389 /* DistanceConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607F213220300017F389 /* DistanceConversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F588605C21320D630017F389 /* BBVABrianWeissberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBVABrianWeissberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F588605F21320D630017F389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F588606121320D630017F389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F588606121320D630017F389 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
 		F588606421320D640017F389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F588606621320D690017F389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F588606921320D690017F389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		F5886079213210D50017F389 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		F588607B213210E40017F389 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		F588607D2132114B0017F389 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		F588607F213220300017F389 /* DistanceConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConversion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 		F5886073213210530017F389 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F588606121320D630017F389 /* ViewController.swift */,
+				F588606121320D630017F389 /* StatesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F588607D2132114B0017F389 /* Keys.swift */,
+				F588607F213220300017F389 /* DistanceConversion.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,11 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F588606221320D630017F389 /* ViewController.swift in Sources */,
+				F588606221320D630017F389 /* StatesViewController.swift in Sources */,
 				F588607E2132114B0017F389 /* Keys.swift in Sources */,
 				F588606021320D630017F389 /* AppDelegate.swift in Sources */,
 				F5886078213210C50017F389 /* State.swift in Sources */,
 				F588607A213210D50017F389 /* States.swift in Sources */,
+				F5886080213220300017F389 /* DistanceConversion.swift in Sources */,
 				F588607C213210E40017F389 /* StateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
