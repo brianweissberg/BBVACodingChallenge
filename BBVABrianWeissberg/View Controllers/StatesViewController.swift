@@ -29,7 +29,8 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 60
+        self.tableView.rowHeight = 155
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setUpTableView()
@@ -59,6 +60,10 @@ extension StatesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.width = cellWidth
         cell.state = state
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
