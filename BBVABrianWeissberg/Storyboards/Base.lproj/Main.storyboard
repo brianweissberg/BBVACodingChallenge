@@ -46,18 +46,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-l6-bR5" userLabel="Empty State View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading States..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7u-Qo-Hst">
+                                        <rect key="frame" x="100" y="287" width="176.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="WWF-8g-8gJ">
+                                        <rect key="frame" x="177" y="355" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="M7u-Qo-Hst" firstAttribute="centerX" secondItem="nbL-l6-bR5" secondAttribute="centerX" id="1dB-ve-iXH"/>
+                                    <constraint firstItem="WWF-8g-8gJ" firstAttribute="centerX" secondItem="nbL-l6-bR5" secondAttribute="centerX" id="Hgf-yr-kof"/>
+                                    <constraint firstItem="M7u-Qo-Hst" firstAttribute="centerY" secondItem="nbL-l6-bR5" secondAttribute="centerY" id="IRD-dR-890"/>
+                                    <constraint firstItem="WWF-8g-8gJ" firstAttribute="top" secondItem="M7u-Qo-Hst" secondAttribute="bottom" constant="38" id="OjB-rD-WmL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cpE-ge-88K" firstAttribute="trailing" secondItem="L7Y-oK-L4G" secondAttribute="trailing" id="1uR-da-3r4"/>
                             <constraint firstItem="L7Y-oK-L4G" firstAttribute="leading" secondItem="cpE-ge-88K" secondAttribute="leading" id="Htc-fI-WeX"/>
                             <constraint firstItem="cpE-ge-88K" firstAttribute="bottom" secondItem="L7Y-oK-L4G" secondAttribute="bottom" id="IpZ-xj-1AZ"/>
+                            <constraint firstItem="nbL-l6-bR5" firstAttribute="leading" secondItem="cpE-ge-88K" secondAttribute="leading" id="KYA-DE-dm9"/>
                             <constraint firstItem="L7Y-oK-L4G" firstAttribute="top" secondItem="cpE-ge-88K" secondAttribute="top" id="SMz-1M-IUo"/>
+                            <constraint firstItem="cpE-ge-88K" firstAttribute="bottom" secondItem="nbL-l6-bR5" secondAttribute="bottom" id="c4T-pQ-cHU"/>
+                            <constraint firstItem="cpE-ge-88K" firstAttribute="trailing" secondItem="nbL-l6-bR5" secondAttribute="trailing" id="d0t-hw-WxX"/>
+                            <constraint firstItem="nbL-l6-bR5" firstAttribute="top" secondItem="cpE-ge-88K" secondAttribute="top" id="glc-hk-z5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cpE-ge-88K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="U.S. States &amp; Territories" id="JGh-tv-Z0Q"/>
+                    <navigationItem key="navigationItem" title="U.S. States &amp; Territories" id="JGh-tv-Z0Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="a4z-KV-AZW">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="xGw-Ae-9dc" id="sSb-a6-7zf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activitySpinner" destination="WWF-8g-8gJ" id="c1C-xQ-b8H"/>
+                        <outlet property="emptyStateView" destination="nbL-l6-bR5" id="HKq-ma-fVN"/>
                         <outlet property="tableView" destination="L7Y-oK-L4G" id="e88-uR-Ffh"/>
                     </connections>
                 </viewController>

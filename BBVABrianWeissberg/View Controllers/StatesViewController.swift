@@ -22,6 +22,23 @@ class StatesViewController: UIViewController {
     //
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+    @IBOutlet weak var emptyStateView: UIView!
+    
+    //
+    // MARK: - Actions
+    //
+    
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        showEmptyStateView()
+        NetworkController.shared.fetchStates { (states) in
+            DispatchQueue.main.async {
+                self.states = states
+                self.tableView.reloadData()
+                self.showTableView()
+            }
+        }
+    }
     
     //
     // MARK: - View Lifecycle
@@ -29,6 +46,7 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showEmptyStateView()
         setUpTableView()
         fetchStates()
     }
@@ -43,6 +61,7 @@ class StatesViewController: UIViewController {
             DispatchQueue.main.async {
                 self.states = states
                 self.tableView.reloadData()
+                self.showTableView()
             }
         }
     }
@@ -52,6 +71,20 @@ class StatesViewController: UIViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    func showEmptyStateView() {
+        self.tableView.isHidden = true
+        self.emptyStateView.isHidden = false
+        self.activitySpinner.isHidden = false
+        self.activitySpinner.startAnimating()
+    }
+    
+    func showTableView() {
+        self.tableView.isHidden = false
+        self.activitySpinner.isHidden = true
+        self.emptyStateView.isHidden = true
+        self.activitySpinner.stopAnimating()
     }
 }
 
