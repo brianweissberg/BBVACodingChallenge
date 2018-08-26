@@ -12,7 +12,7 @@ import BWCustomCell
 class StatesViewController: UIViewController {
     
     //
-    // MARK: - Variables
+    // MARK: - Variable
     //
     
     var states = [State]()
@@ -29,14 +29,15 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 155
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         setUpTableView()
+        fetchStates()
     }
     
-    func setUpTableView() {
+    //
+    // MARK: - Methods
+    //
+    
+    func fetchStates() {
         
         NetworkController.shared.fetchStates { (states) in
             DispatchQueue.main.async {
@@ -44,6 +45,13 @@ class StatesViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func setUpTableView() {
+        self.tableView.rowHeight = 155
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 }
 
@@ -54,11 +62,14 @@ extension StatesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as? StateTableViewCell ?? StateTableViewCell()
+        
         let state = states[indexPath.row]
         let cellWidth = self.view.frame.width
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as? StateTableViewCell ?? StateTableViewCell()
         cell.width = cellWidth
         cell.state = state
+        
         return cell
     }
     
