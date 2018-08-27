@@ -35,9 +35,9 @@ class StatesViewController: UIViewController {
             DispatchQueue.main.async {
                 self.states = states
                 self.tableView.reloadData()
-                self.showTableView()
             }
         }
+        showTableView()
     }
     
     //
@@ -49,6 +49,7 @@ class StatesViewController: UIViewController {
         showEmptyStateView()
         setUpTableView()
         fetchStates()
+        showTableView()
     }
     
     //
@@ -61,7 +62,6 @@ class StatesViewController: UIViewController {
             DispatchQueue.main.async {
                 self.states = states
                 self.tableView.reloadData()
-                self.showTableView()
             }
         }
     }
@@ -82,8 +82,8 @@ class StatesViewController: UIViewController {
     
     func showTableView() {
         self.tableView.isHidden = false
-        self.activitySpinner.isHidden = true
         self.emptyStateView.isHidden = true
+        self.activitySpinner.isHidden = true
         self.activitySpinner.stopAnimating()
     }
 }
@@ -99,8 +99,8 @@ extension StatesViewController: UITableViewDelegate, UITableViewDataSource {
         let state = states[indexPath.row]
         let cellWidth = self.view.frame.width
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as? StateTableViewCell ?? StateTableViewCell()
-        cell.width = cellWidth
+        let cell = tableView.dequeueReusableCell(withIdentifier: Keys.stateCell, for: indexPath) as? StateTableViewCell ?? StateTableViewCell()
+        cell.frameWidth = cellWidth
         cell.state = state
         
         return cell

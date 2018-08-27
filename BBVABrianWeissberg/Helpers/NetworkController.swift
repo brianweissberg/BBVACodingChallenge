@@ -22,7 +22,7 @@ class NetworkController {
     
     func fetchStates(completion: @escaping (_ state: [State]) -> Void) {
         
-        guard let url = URL(string: "http://services.groupkt.com/state/get/USA/all") else {
+        guard let url = URL(string: Keys.statesURL) else {
             print("There was an error with the URL. File: \(#file). Function: \(#function)")
             completion([])
             return

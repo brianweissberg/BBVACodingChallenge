@@ -16,6 +16,7 @@ class StateTableViewCell: UITableViewCell {
     // MARK: - Variables
     //
     
+    var frameWidth: CGFloat = 0
     var state: State? {
         didSet {
             DispatchQueue.main.async {
@@ -23,7 +24,6 @@ class StateTableViewCell: UITableViewCell {
             }
         }
     }
-    var width: CGFloat = 0
     
     //
     // MARK: - Outlets
@@ -39,7 +39,7 @@ class StateTableViewCell: UITableViewCell {
         
         guard let state = state else { return }
         
-        let cellView = BWCustomCell(frame: CGRect(x: 0, y: 0, width: width, height: 145))
+        let cellView = BWCustomCell(frame: CGRect(x: 0, y: 0, width: frameWidth, height: 145))
         cellContentView.addSubview(cellView)
         let area = DistanceConversion.convertSquareKilometersToSquareMiles(squareKilometers: state.area)
         

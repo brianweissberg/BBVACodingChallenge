@@ -28,4 +28,3 @@ struct States: Decodable {
         self.states = states
     }
 }
-

@@ -16,7 +16,7 @@ class DistanceConversion: NSString {
         
         if let filteredKilometers = Double(sqm.filterToDigits) {
             
-            let result = Int(filteredKilometers * 0.38610)
+            let result = Int(filteredKilometers * Keys.squareKilometersConversion)
             if let formattedNumber = formatIntegerWithDecimals(number: result) {
                 finalResult = formattedNumber
             }
