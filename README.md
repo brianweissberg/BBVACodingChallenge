@@ -1,6 +1,6 @@
 # BBVA Coding Challenge
 
-![alt tag](https://drive.google.com/file/d/1JwO15L7i6dqJ7PPP_0hM4nI9xSBhdaRM/view)
+![alt tag](https://drive.google.com/uc?id=1JwO15L7i6dqJ7PPP_0hM4nI9xSBhdaRM)
 
 ### About The Developer
 ------
