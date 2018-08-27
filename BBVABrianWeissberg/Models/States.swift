@@ -23,8 +23,6 @@ struct States: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let results = try values.nestedContainer(keyedBy: RestResponseKeys.self, forKey: .restResponse)
-        let states = try results.decode([State].self, forKey: .result)
-        
-        self.states = states
+        states = try results.decode([State].self, forKey: .result)
     }
 }

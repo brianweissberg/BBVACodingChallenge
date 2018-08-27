@@ -35,6 +35,12 @@ class StateTableViewCell: UITableViewCell {
     // MARK: - Methods
     //
     
+    override func prepareForReuse() {
+        for view in cellContentView.subviews {
+            view.removeFromSuperview()
+        }
+    }
+    
     func updateCell() {
         
         guard let state = state else { return }
@@ -53,12 +59,6 @@ class StateTableViewCell: UITableViewCell {
             cellView.set(largestCity: "Largest City: \(city)")
         } else {
             cellView.set(largestCity: "Largest City: N/A")
-        }
-    }
-    
-    override func prepareForReuse() {
-        for view in cellContentView.subviews {
-            view.removeFromSuperview()
         }
     }
 }

@@ -17,7 +17,6 @@
 		F588606A21320D690017F389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588606821320D690017F389 /* LaunchScreen.storyboard */; };
 		F5886078213210C50017F389 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5886077213210C50017F389 /* State.swift */; };
 		F588607A213210D50017F389 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5886079213210D50017F389 /* States.swift */; };
-		F588607C213210E40017F389 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607B213210E40017F389 /* StateController.swift */; };
 		F588607E2132114B0017F389 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607D2132114B0017F389 /* Keys.swift */; };
 		F5886080213220300017F389 /* DistanceConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588607F213220300017F389 /* DistanceConversion.swift */; };
 		F5C9AFBC21326B6B00A8C569 /* BWCustomCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C9AFBB21326B5700A8C569 /* BWCustomCell.framework */; };
@@ -69,7 +68,6 @@
 		F588606B21320D690017F389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5886077213210C50017F389 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F5886079213210D50017F389 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
-		F588607B213210E40017F389 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		F588607D2132114B0017F389 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		F588607F213220300017F389 /* DistanceConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConversion.swift; sourceTree = "<group>"; };
 		F5C9AFB621326B5600A8C569 /* BWCustomCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BWCustomCell.xcodeproj; path = ../BWCustomCell/BWCustomCell.xcodeproj; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				F5886071213210450017F389 /* Models */,
-				F58860722132104C0017F389 /* Model Controller */,
 				F5886073213210530017F389 /* View Controllers */,
 				F5886076213210650017F389 /* Storyboards */,
 				F58860752132105F0017F389 /* Helpers */,
@@ -125,14 +122,6 @@
 				F5886079213210D50017F389 /* States.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F58860722132104C0017F389 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F588607B213210E40017F389 /* StateController.swift */,
-			);
-			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 		F5886073213210530017F389 /* View Controllers */ = {
@@ -279,7 +268,6 @@
 				F588607A213210D50017F389 /* States.swift in Sources */,
 				F5886080213220300017F389 /* DistanceConversion.swift in Sources */,
 				F5254AB4213330D000CFDB69 /* StateTableViewCell.swift in Sources */,
-				F588607C213210E40017F389 /* StateController.swift in Sources */,
 				F5028CA021322C500051C75A /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
